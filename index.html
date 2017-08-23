@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Finder</title>
+    <link rel="shortcut icon" href="../eventFinder/assets/images/headphones.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <script
+     src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1>EVENT FINDER</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="searchHead">
+                        <h3 class="panel-title">Search</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">City</span>
+                                    <input type="text" class="form-control" aria-describedby="basic-addon1" id="city-input" onkeyup="checkCity(this)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">State</span>
+                                    <input type="text" class="form-control" aria-describedby="basic-addon1" id="state-input" onkeyup="checkState(this)">
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group" id="prefetch">
+                                    <span class="input-group-addon" id="basic-addon1">Zip Code</span>
+                                    <input type="text" class="form-control typeahead" placeholder="Zip Code" aria-describedby="basic-addon1" id="zip-input" maxlength="5" onkeyup="checkZip(this)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                  <span class="input-group-addon">Radius</span>
+                                  <input type="text" class="form-control" aria-label="miles" id="radius" onkeyup="checkRadius(this)">
+                                  <span class="input-group-addon">miles</span>
+                                </div>
+                            </div>
+                            <strong><div id="alert"></div></strong>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default" id="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="eventsHead">
+                        <h3 class="panel-title">Upcoming Events</h3>
+                    </div>
+                    <div class="scrollingTable">
+                        <table class="table" id="eventsTBL">
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading"  id="dealsHead">
+                        <h3 class="panel-title">Deals</h3>
+                    </div>
+                    <div class="scrollingTable">
+                        <table class="table" id="dealsTBL">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" id="recentHead">
+                    <h3 class="panel-title">Recent Searches</h3>
+                </div>
+                <div class="panel-body scrollingTable">
+                    <table class="table table-hover" id="recentTable">
+                        <thead>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Zip Code</th>
+                            <th>Radius (miles)</th>
+                        </thead>
+                        <tbody id="recentTBL"></tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+
+    <script src="./assets/javascript/eventFinder.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="./assets/javascript/firebase.js"></script>
+</body>
+</html>

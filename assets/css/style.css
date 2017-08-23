@@ -1,0 +1,93 @@
+body {
+    color: #3d1112;
+    background-color: #3d1112;
+}
+
+.jumbotron {
+    text-align: center;
+    background-image: url(../images/concert3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    background-position: bottom;
+    min-height: 300px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+}
+
+#eventsHead, #dealsHead, #searchHead, #recentHead {
+    background-color: #fcbd87;
+    color: #3d1112;
+}
+
+.panel-default {
+    border-color: #d5824c;
+/*    background-color: #fee1b5;*/
+}
+
+.input-group-addon {
+    color: #3d1112;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+#submit {
+    margin-top: 30%;
+    background-color: #ab6a58;
+    color: #FBEFD8;
+}
+
+table {
+    width:  100%;
+    border-collapse: collapse;
+}
+
+.scrollingTable {
+    height: 275px;
+    overflow-y: auto;
+}
+
+img {
+    width: 80px;
+    height: 48.8px;
+}
+
+#dealsRow, #eventsRow {
+    height: 90px;
+    word-wrap: break-word;
+}
+
+.col-md-2 {
+    font-size: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    font-family: 'Oswald', sans-serif;
+}
+
+table tr a {
+    color: #3d1112;
+}
+
+#eventsTBL tr:hover, #dealsTBL tr:hover, #recentTBL tr:hover {
+    background-color: #ab6a58;
+    color: #FBEFD8;
+}
+
+table tr:hover a {
+    text-decoration: none;
+    color: #FBEFD8;
+}
+
+#alert {
+    color: red;
+}
+
+#fee1b5
+#fcbd87
+#d5824c
+#ab6a58
+#883b27
+#3d1112
